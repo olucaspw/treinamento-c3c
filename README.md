@@ -22,7 +22,7 @@ Como retorno deve ser passado um vetor que tem 2 valores um para cada possível 
 Caso o delta seja negativo, retorne, ao invés do vetor, um string com a frase: “Delta é negativo”.
 
 **Interpretação:**
-Nessa questão, é feito o registro dos 3 coeficientes por meio de 3 *inputs* diferentes. A equação e seu resultado é feito assim que que um valor do *input* é alterado. Caso $\Delta \ge 0$, a solução da equação é dada com os 2 valores das raízes. Caso contrário, o retorno é apenas a equação e que o $\Delta$ é negativo. A solução também é dado caso o coeficiente quadrático seja igual a 0, gerando uma função afim, ou no caso de ser apenas a constante, que a solução é a própria constante.
+Nessa questão, é feito o registro dos 3 coeficientes por meio de 3 *inputs* diferentes. A equação e seu resultado é feito assim que que um valor do *input* é alterado. Caso $\Delta \ge 0$, a solução da equação é dada com os 2 valores das raízes. Caso contrário, o retorno é apenas a equação e que o $\Delta < 0$. A solução também é dado caso o coeficiente quadrático seja igual a 0, gerando uma função afim, ou no caso de ser apenas a constante, que a solução é a própria constante.
 
 ## Questão 03 - Sistema de Notas
 >Construa um código JS que receba uma valor através de um input para um sistema de notas de uma instituição que possui a seguinte política de classificação:  
