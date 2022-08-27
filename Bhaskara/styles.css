@@ -1,0 +1,20 @@
+input {
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input:focus{
+    background-color: #f5f5f5;
+}
+
+h2 {
+    font-family: cursive;
+}
+
+.center{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+

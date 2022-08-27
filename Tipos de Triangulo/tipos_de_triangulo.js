@@ -22,18 +22,18 @@ function evaluate(sides){
     }
 }
 
-function getVal(id) {
+function getVal(id){
     /* Pega o valor da caixa e atribui a sua respectiva array */
     sizeValues[id] = document.getElementById(id).value;
 }
 
 function getResult(){
     if(sizeValues.length != 3 || sizeValues.includes('')){
-        //Caso as 3 caixas não estejam com valor 
+        // Caso as 3 caixas não estejam com valor 
         document.getElementById('result').innerHTML = '';
         alert('Todos os campos precisam de um valor!')
     }else{
-        console.log(sizeValues)
+        // Caso as 3 caixas estejam preenchidas, os valores seram avaliados
         evaluate(sizeValues)
     }
 }   
