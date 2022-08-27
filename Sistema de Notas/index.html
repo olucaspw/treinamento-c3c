@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhaskara</title>
+    <title>Sistema de Notas</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="center">
-        <h1>Calculadora de Equação do Segundo Grau</h1>
-        <input id='0' placeholder="a" onblur="getVal(this.id)">
-        <input id='1' placeholder="b" onblur="getVal(this.id)">
-        <input id='2' placeholder="c" onblur="getVal(this.id)">
+        <h1>Sistema de Notas</h1>
+        <input id='grade' placeholder="Digite a nota..." onblur="getVal()" maxlength="3">
         <h2 id="result"></h2>
     </div>
-    <script src="bhaskara.js"></script>
+    <script src="sistema_de_notas.js"></script>
 </body>
 </html>

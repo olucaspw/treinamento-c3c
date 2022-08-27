@@ -4,11 +4,6 @@
 */
 
 /* --- INICIALIZAÇÃO --- */
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
-
 const MINIMUM = 38 //Menor nota que leva ao arredondamento
 const MAX = 100 // Nota máxima da prova
 var startGrade;
@@ -40,31 +35,24 @@ function rounding(grade){
 
         // Imprime os resultados no console
         if(rounded == false){
-            console.log(`Aprovado! Nota final: ${grade}`);
+            // Se a nota foi arredondada
+            document.getElementById('result').innerHTML = `Aprovado! Nota final: ${grade}`;
         }else{
-            console.log(`Aprovado! Nota final: ${newGrade}`);
+            // Se a nota foi arredondada
+            document.getElementById('result').innerHTML = `Aprovado! Nota final: ${newGrade}`;
         }
 
     }else{
         // Caso a nota mínima não seja atingida o aluno será reprovado
-        console.log(`Reprovado! Nota final: ${grade}`);
+        document.getElementById('result').innerHTML = `Reprovado! Nota final: ${grade}`;
     }
 }
 
-function init(){
-    /* Inicia o código e funçôes */
-
-    readline.question('Qual a nota? ', result => {
-        /* Leitura da nota feita com readline */
-        startGrade = result;
-        if(startGrade >= 0 && startGrade <= MAX){
-            //Se a nota estiver dentro dos limites possíveis
-            rounding(startGrade);
-        }else{
-            console.log('Nota Inválida');
-        }
-        readline.close();
-    });
+function getVal(){
+    startGrade = document.getElementById('grade').value;
+    if(startGrade < 0 || startGrade > 100){
+        alert('A nota deve ser no intervalo de 0 a 100')
+    }else{
+        rounding(startGrade)
+    }
 }
-
-init();
