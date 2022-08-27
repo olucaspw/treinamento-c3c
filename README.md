@@ -22,7 +22,7 @@ Como retorno deve ser passado um vetor que tem 2 valores um para cada possível 
 Caso o delta seja negativo, retorne, ao invés do vetor, um string com a frase: “Delta é negativo”.
 
 **Interpretação:**
-Nessa questão, é feito o registro dos 3 coeficientes por meio de 3 *inputs* diferentes. A equação e seu resultado é feito assim que que um valor do *input* é alterado. Caso $\Delta \ge 0$, a solução da equação é dada com os 2 valores das raízes. Caso contrário, o retorno é apenas a equação e que o $\Delta < 0$. A solução também é dado caso o coeficiente quadrático seja igual a 0, gerando uma função afim, ou no caso de ser apenas a constante, que a solução é a própria constante.
+Nessa questão, foi feito o registro dos 3 coeficientes por meio de 3 *inputs* diferentes. A equação e seu resultado é feito assim que que um valor do *input* é alterado. Caso $\Delta \ge 0$, a solução da equação é dada com os 2 valores das raízes. Caso contrário, o retorno é apenas a equação e que o $\Delta$ é negativo. A solução também é dado caso o coeficiente quadrático seja igual a 0, gerando uma função afim, ou no caso de ser apenas a constante, que a solução é a própria constante.
 
 ## Questão 03 - Sistema de Notas
 >Construa um código JS que receba uma valor através de um input para um sistema de notas de uma instituição que possui a seguinte política de classificação:  
@@ -30,13 +30,14 @@ Nessa questão, é feito o registro dos 3 coeficientes por meio de 3 *inputs* di
 >* Alunos com nota abaixo de 40 são reprovados.  
 >* As notas possuem a seguinte regra de arredondamento:  
 >* Se a diferença entre a nota e o próximo múltiplo de 5 for menor que 3, arredondar a nota para esse próximo múltiplo de 5.  
->* Se a nota for abaixo de 38, não é feito nenhum arredondamento pois esta nota resulta na reprovação do aluno.  
+>* Se a nota for abaixo de 38, não é feito nenhum arredondamento pois esta nota resulta na reprovação do aluno. 
 Por exemplo, a nota 84 será arredondada para 85, mas a nota 29 não será arredondada por ser abaixo de 40 e não ser possível arredondamento eficiente, ou seja, que evite a reprovação do aluno.  
 No caso de a nota ser 38, o arredondamento é possível pois atingirá 40 e o aluno será aprovado.
 
 **Interpretação**
+Para essa, um valor de entrada é recebido e conferido caso concorde as regras de aprovação. No caso, 38 seria a nota mínima, já que essa seria arredonda para 40, que é de fato a nota mínima. Senão, resulta numa reprovação. É feito também o tratamento pra caso o valor seja menor que 0 ou maior que 100, resultando num alerta. A regra de arredondamento é feita para todos os valores acima de 40. Exemplos: 53 $\rightarrow$ 55, 99 $\rightarrow$ 100, 72 $\rightarrow$  72].
 
-## Questão 04 - Sistema de Notas
+## Questão 04 - Luidy Moura
 >Criar um método que irá receber um valor inteiro como argumento e retornar um array com uma contagem até o argumento como limite.    
 Quando o número for divisível por 5, deve-se substituir o número pela String “ Luidy” e caso o número seja divisível por 9, deve-se substituir o número por “Moura”.  
 Se o número for divisível por ambos deve-se colocar “LuidyMoura”.   
@@ -47,3 +48,4 @@ Saída:
 1, 2, 3, 4, Luidy, 6, 7, 8, Moura, Luidy, 11, 12, 13, 14, Luidy, 16, 17, Moura, 19, Luidy, 21, 22, 23, 24, Luidy, 26, Moura, 28, 29, Luidy, 31, 32, 33, 34, Luidy, Moura, 37, 38, 39, Luidy, 41, 42, 43, 44, LuidyMoura.
 
 **Interpretação**
+Recebe um valor *input* que, com esse, é gerado e apresentado uma sequência numérica e substituído caso o valor seja divisível por 5, por 9 ou por 5 e 9. São trocados para Luidy, Moura e LuidyMoura, respectivamente.
