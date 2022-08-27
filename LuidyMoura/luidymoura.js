@@ -1,6 +1,8 @@
-const number = 900000;
+/* --- DEFINIÇÕES  */
+let luidymoura;
 
-function LuidyMoura(){
+/* FUNÇÕES */
+function LuidyMoura(number){
     /* Retorna um array conforme o padrão Luidy Moura */
 
     let pattern = []; // Array com todos os numeros do padrao Luidy Moura
@@ -25,4 +27,10 @@ function LuidyMoura(){
     return pattern;
 }
 
-console.log(LuidyMoura().join(', '));
+function getVal(){
+    luidymoura = document.getElementById('number').value;
+}
+
+function getResult(){
+  document.getElementById('result').innerHTML = LuidyMoura(luidymoura); 
+}
